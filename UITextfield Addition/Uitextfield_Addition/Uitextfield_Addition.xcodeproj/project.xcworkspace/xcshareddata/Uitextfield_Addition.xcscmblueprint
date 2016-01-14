@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "DB4DFAD4291F7721EBFAA776EC7716E9B6863DD8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "DB4DFAD4291F7721EBFAA776EC7716E9B6863DD8" : 0,
+    "4439E56471AC252A78720ED26913450698154AC7" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D6A73CEE-D3AE-4796-90EB-6A636A382A88",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "DB4DFAD4291F7721EBFAA776EC7716E9B6863DD8" : "Swift-Demos\/",
+    "4439E56471AC252A78720ED26913450698154AC7" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Uitextfield_Addition",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "UITextfield Addition\/Uitextfield_Addition\/Uitextfield_Addition.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/christijohn\/Auto-Layout-App.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4439E56471AC252A78720ED26913450698154AC7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/christijohn\/Swift-Demos.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DB4DFAD4291F7721EBFAA776EC7716E9B6863DD8"
+    }
+  ]
+}
