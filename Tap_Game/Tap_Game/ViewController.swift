@@ -34,6 +34,7 @@ class ViewController: UIViewController {
         
         score++
         scoreLabel.text = "\(score)"
+        
     }
 
     func setupGame(){
