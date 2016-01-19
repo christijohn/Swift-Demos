@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tap_Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kiF-e6-vR8">
+                                <rect key="frame" x="73" y="28" width="174" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="Qcg-Ge-m0O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="29"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VdE-pO-L2o">
+                                <rect key="frame" x="20" y="138" width="280" height="137"/>
+                                <color key="backgroundColor" red="1" green="0.70603755482456143" blue="0.51411732456140347" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="Aoc-hj-sgU"/>
+                                    <constraint firstAttribute="height" constant="137" id="eD4-Xe-9sr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Tap Me"/>
+                                <connections>
+                                    <action selector="tapAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4js-Yd-GvT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnz-YZ-tSY">
+                                <rect key="frame" x="0.0" y="405" width="320" height="163"/>
+                                <color key="backgroundColor" red="0.29088712993421051" green="0.70603755482456143" blue="0.25532826206140347" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="66"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGh-Yc-iRi">
+                                <rect key="frame" x="109" y="362" width="102" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="bpa-WB-rry"/>
+                                    <constraint firstAttribute="width" constant="102" id="e3p-kw-xm8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vnz-YZ-tSY" firstAttribute="top" secondItem="dGh-Yc-iRi" secondAttribute="bottom" constant="14" id="46f-Jf-nCB"/>
+                            <constraint firstItem="vnz-YZ-tSY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KoP-NP-Fkn"/>
+                            <constraint firstAttribute="trailing" secondItem="vnz-YZ-tSY" secondAttribute="trailing" id="Ndd-ob-t75"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vnz-YZ-tSY" secondAttribute="bottom" id="Uh0-az-UxB"/>
+                            <constraint firstItem="kiF-e6-vR8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="73" id="Vuq-0y-Uk1"/>
+                            <constraint firstItem="VdE-pO-L2o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WuK-Rq-uM0"/>
+                            <constraint firstItem="dGh-Yc-iRi" firstAttribute="top" secondItem="VdE-pO-L2o" secondAttribute="bottom" constant="87" id="eQ4-kJ-l0s"/>
+                            <constraint firstItem="kiF-e6-vR8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="hDQ-tG-Scu"/>
+                            <constraint firstAttribute="trailing" secondItem="kiF-e6-vR8" secondAttribute="trailing" constant="73" id="jWj-V8-lUg"/>
+                            <constraint firstItem="VdE-pO-L2o" firstAttribute="top" secondItem="kiF-e6-vR8" secondAttribute="bottom" constant="59" id="mWt-T8-TsZ"/>
+                            <constraint firstItem="dGh-Yc-iRi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vKa-ER-lm5"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="countLabel" destination="kiF-e6-vR8" id="U3H-bH-ZSr"/>
+                        <outlet property="scoreLabel" destination="vnz-YZ-tSY" id="EAk-7Y-5eP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="264" y="413"/>
+        </scene>
+    </scenes>
+</document>
