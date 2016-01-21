@@ -15,9 +15,26 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipSlider: UISlider!
     @IBOutlet weak var taxLabel: UILabel!
     @IBOutlet weak var tipLabel: UILabel!
+    
+    //optional string, may or may not have value
+    var name:String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        //use of if let while dealing with optionals..
+        if let myName = name{
+            print("name is there \(myName)");
+        }
+        
+        //Use of guard while dealing with optionals..
+        guard let _ = name else{
+            print("no name dude..!!")
+            return;
+        }
+
+        
     }
 
     override func didReceiveMemoryWarning() {
