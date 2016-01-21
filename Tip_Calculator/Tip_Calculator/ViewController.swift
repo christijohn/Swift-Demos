@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         let tipCalc = TipCalculatorModel(totalBill: bill!, taxPct: tax)
         let tip = tipCalc.calculateTip(Double(tipSlider.value))
         
-        let alert = UIAlertController(title: "Tip kodu machi..!", message: String(format: "You have to give %.2f as Tip",tip), preferredStyle: UIAlertControllerStyle.Alert)
+        let alert = UIAlertController(title: "Tip kodu machi..!", message: String(format: "You have to give %.2f as Tip",tip.tipAmount), preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: nil))
         presentViewController(alert, animated: true, completion: nil)
         

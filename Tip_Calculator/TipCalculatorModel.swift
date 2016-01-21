@@ -27,9 +27,10 @@ class TipCalculatorModel{
         self.taxPct = taxPct
     }
     
-    func calculateTip(tipPct:Double)->Double{
+    //Using tuple as return type
+    func calculateTip(tipPct:Double)->(tipAmount:Double,billAmount:Double){
         
-        return preTaxBill * (tipPct/10)
+        return (preTaxBill * (tipPct/10), postTaxBill)
     }
     
     func returnSampleTips()->[Int:Double]{
@@ -40,7 +41,8 @@ class TipCalculatorModel{
         for tip in tipArray{
             
             let intTip = Int(tip*100)
-            tempDic[intTip] = calculateTip(tip)
+            let tipTuple = calculateTip(tip)
+            tempDic[intTip] = tipTuple.tipAmount // Usage of tuple
         }
         return tempDic
     }
