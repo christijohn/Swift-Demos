@@ -29,7 +29,7 @@ class TipCalculatorModel{
     
     func calculateTip(tipPct:Double)->Double{
         
-        return preTaxBill * tipPct
+        return preTaxBill * (tipPct/10)
     }
     
     func returnSampleTips()->[Int:Double]{

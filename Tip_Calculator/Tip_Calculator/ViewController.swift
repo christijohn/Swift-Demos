@@ -12,7 +12,9 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var totalTextField: UITextField!
     @IBOutlet weak var taxSlider: UISlider!
+    @IBOutlet weak var tipSlider: UISlider!
     @IBOutlet weak var taxLabel: UILabel!
+    @IBOutlet weak var tipLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -30,7 +32,7 @@ class ViewController: UIViewController {
         let bill = Double(totalTextField.text!)
         let tax = Double(taxSlider.value)
         let tipCalc = TipCalculatorModel(totalBill: bill!, taxPct: tax)
-        let tip = tipCalc.calculateTip(0.15)
+        let tip = tipCalc.calculateTip(Double(tipSlider.value))
         
         let alert = UIAlertController(title: "Tip kodu machi..!", message: String(format: "You have to give %.2f as Tip",tip), preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: nil))
@@ -45,5 +47,10 @@ class ViewController: UIViewController {
         print(taxLabel.text)
     }
     
+    @IBAction func tipPctChanged(sender: AnyObject) {
+        
+        totalTextField.resignFirstResponder()
+        tipLabel.text = String(format: "Tip percentage %.1f%%",tipSlider.value)
+    }
 }
 
