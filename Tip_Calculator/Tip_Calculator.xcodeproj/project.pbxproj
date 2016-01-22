@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		356EF7A01C5208F600B70491 /* TipDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356EF79F1C5208F600B70491 /* TipDetailViewController.swift */; };
 		35FE4A8C1C4F977C00F1F225 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A8B1C4F977C00F1F225 /* AppDelegate.swift */; };
 		35FE4A8E1C4F977C00F1F225 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A8D1C4F977C00F1F225 /* ViewController.swift */; };
 		35FE4A911C4F977C00F1F225 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35FE4A8F1C4F977C00F1F225 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		356EF79F1C5208F600B70491 /* TipDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipDetailViewController.swift; sourceTree = "<group>"; };
 		35FE4A881C4F977C00F1F225 /* Tip_Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tip_Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35FE4A8B1C4F977C00F1F225 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35FE4A8D1C4F977C00F1F225 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				35FE4A8B1C4F977C00F1F225 /* AppDelegate.swift */,
 				35FE4A8D1C4F977C00F1F225 /* ViewController.swift */,
+				356EF79F1C5208F600B70491 /* TipDetailViewController.swift */,
 				35FE4A9D1C4F982F00F1F225 /* TipCalculatorModel.swift */,
 				35FE4A8F1C4F977C00F1F225 /* Main.storyboard */,
 				35FE4A921C4F977C00F1F225 /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 				35FE4A9E1C4F982F00F1F225 /* TipCalculatorModel.swift in Sources */,
 				35FE4A8E1C4F977C00F1F225 /* ViewController.swift in Sources */,
 				35FE4A8C1C4F977C00F1F225 /* AppDelegate.swift in Sources */,
+				356EF7A01C5208F600B70491 /* TipDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +292,7 @@
 				35FE4A9C1C4F977C00F1F225 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

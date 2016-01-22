@@ -37,7 +37,7 @@ class TipCalculatorModel{
     func returnSampleTips()->[Int:(tipAmount:Double,billAmount:Double)]{
         
         var tempDic = [Int:(tipAmount:Double,billAmount:Double)]()
-        let tipArray = [0.15,0.20,0.25]
+        let tipArray = [0.10,0.15,0.20,0.25,0.30]
         
         for tip in tipArray{
             
@@ -45,5 +45,18 @@ class TipCalculatorModel{
             tempDic[intTip] = calculateTip(tip) // Usage of tuple
         }
         return tempDic
+    }
+    
+    func returnTips()->[(tipAmount:Double,billAmount:Double)]{
+        
+        var tempArray = [(tipAmount:Double,billAmount:Double)]()
+        let tipArray = [0.10,0.15,0.20,0.25,0.30]
+        
+        for tip in tipArray{
+            
+            tempArray.append(calculateTip(tip))
+        }
+        
+        return tempArray
     }
 }

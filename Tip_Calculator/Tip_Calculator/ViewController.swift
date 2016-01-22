@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import TipDetailViewController
 
 class ViewController: UIViewController {
 
@@ -18,6 +19,7 @@ class ViewController: UIViewController {
     
     //optional string, may or may not have value
     var name:String?
+    var dataArray:Array<(tipAmount:Double,billAmount:Double)>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +35,6 @@ class ViewController: UIViewController {
             print("no name dude..!!")
             return;
         }
-
         
     }
 
@@ -48,12 +49,14 @@ class ViewController: UIViewController {
         
         let bill = Double(totalTextField.text!)
         let tax = Double(taxSlider.value)
+       
         let tipCalc = TipCalculatorModel(totalBill: bill!, taxPct: tax)
         let tip = tipCalc.calculateTip(Double(tipSlider.value))
+        dataArray = tipCalc.returnTips()
         
-        let alert = UIAlertController(title: "Tip kodu machi..!", message: String(format: "You have to give %.2f as Tip",tip.tipAmount), preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: nil))
-        presentViewController(alert, animated: true, completion: nil)
+//        let alert = UIAlertController(title: "Tip kodu machi..!", message: String(format: "You have to give %.2f as Tip",tip.tipAmount), preferredStyle: UIAlertControllerStyle.Alert)
+//        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: nil))
+//        presentViewController(alert, animated: true, completion: nil)
         
     }
 
@@ -68,6 +71,15 @@ class ViewController: UIViewController {
         
         totalTextField.resignFirstResponder()
         tipLabel.text = String(format: "Tip percentage %.1f%%",tipSlider.value)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+       
+        if(segue.identifier == "tipDetailSegue"){
+            
+            let tipDetailController:TipDetailViewController = segue.destinationViewController as! TipDetailViewController
+            tipDetailController.dataArray = dataArray
+        }
     }
 }
 
