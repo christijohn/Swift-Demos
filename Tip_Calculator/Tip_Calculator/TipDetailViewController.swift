@@ -8,15 +8,25 @@
 
 import UIKit
 
+@objc protocol TableUpdates{
+
+    func cellTappedAtIndexPath(indexPath:NSIndexPath)
+    optional func tableScrolled()
+    
+}
+
 class TipDetailViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     var dataArray:Array <(tipAmount:Double,billAmount:Double)>?
     var tipArray:Array<Double>?
+    weak var delegate:TableUpdates?
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        //self.navigationController?.navigationBarHidden = false
+        
         tipArray = [0.10,0.15,0.20,0.25,0.30]
         // Do any additional setup after loading the view.
     }
@@ -45,6 +55,20 @@ class TipDetailViewController: UIViewController,UITableViewDataSource,UITableVie
         return tableViewCell!
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        delegate?.cellTappedAtIndexPath(indexPath)
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        
+        delegate?.tableScrolled?()
+    }
+    
+    deinit{
+        
+        delegate = nil
+    }
     /*
     // MARK: - Navigation
 

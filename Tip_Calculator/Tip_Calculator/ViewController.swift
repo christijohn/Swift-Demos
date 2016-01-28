@@ -9,7 +9,7 @@
 import UIKit
 //import TipDetailViewController
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,TableUpdates {
 
     @IBOutlet weak var totalTextField: UITextField!
     @IBOutlet weak var taxSlider: UISlider!
@@ -24,6 +24,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        //self.navigationController?.navigationBarHidden = true
         
         //use of if let while dealing with optionals..
         if let myName = name{
@@ -79,7 +81,18 @@ class ViewController: UIViewController {
             
             let tipDetailController:TipDetailViewController = segue.destinationViewController as! TipDetailViewController
             tipDetailController.dataArray = dataArray
+            tipDetailController.delegate = self
         }
     }
+    
+    
+    @objc func cellTappedAtIndexPath(indexPath: NSIndexPath) {
+        print("cell tapped at row \(indexPath.row)")
+    }
+    
+    @objc func tableScrolled() {
+        print("Scrolling...")
+    }
+    
 }
 
